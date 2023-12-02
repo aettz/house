@@ -36,75 +36,68 @@ func (h House) Print() {
 }
 func Make() House {
 	table := furniture.Furniture{
-		Type:          "Стол",
-		Length:        120,
-		Width:         60,
-		Color:         "White",
-		ComfortRating: 3,
+		Type:   "Стол",
+		Length: 160,
+		Width:  70,
+		Height: 100,
+		Color:  "Серый",
 	}
 	chair := furniture.Furniture{
-		Type:          "Стул",
-		Length:        40,
-		Width:         40,
-		Color:         "Зеленый",
-		ComfortRating: 1,
+		Type:   "Кресло",
+		Length: 100,
+		Width:  45,
+		Height: 70,
+		Color:  "Черный",
 	}
 	bed := furniture.Furniture{
-		Type:          "Кровать",
-		Length:        200,
-		Width:         120,
-		Color:         "Белый",
-		ComfortRating: 4,
+		Type:   "Кровать",
+		Length: 200,
+		Width:  100,
+		Height: 20,
+		Color:  "Розовый",
 	}
 	wardrobe := furniture.Furniture{
-		Type:          "Шкаф",
-		Length:        80,
-		Width:         50,
-		Color:         "Белый",
-		ComfortRating: 5,
-	}
-	shelf := furniture.Furniture{
-		Type:          "Полка",
-		Length:        30,
-		Width:         10,
-		Color:         "Белый",
-		ComfortRating: 1,
+		Type:   "Гардероб",
+		Length: 400,
+		Width:  300,
+		Height: 250,
+		Color:  "Белый",
 	}
 
 	mom := family.Family{
-		Sex:          false,
-		Age:          27,
-		Name:         "Сиба",
-		FamilyStatus: false,
-		Children:     0,
+		Sex:          "женщина",
+		Age:          51,
+		Name:         "Вера",
+		FamilyStatus: "замужем",
+		Children:     3,
 	}
 	dad := family.Family{
-		Sex:          false,
-		Age:          20,
-		Name:         "Данае",
-		FamilyStatus: false,
-		Children:     0,
+		Sex:          "мужчина",
+		Age:          56,
+		Name:         "Олег",
+		FamilyStatus: "женат",
+		Children:     3,
 	}
 	bro := family.Family{
-		Sex:          true,
-		Age:          0,
-		Name:         "Володя",
-		FamilyStatus: true,
-		Children:     324,
+		Sex:          "мужчина",
+		Age:          20,
+		Name:         "Савелий",
+		FamilyStatus: "свободен",
+		Children:     0,
 	}
 	esis := family.Family{
-		Sex:          false,
-		Age:          1,
-		Name:         "Гульчатай",
-		FamilyStatus: false,
-		Children:     3,
+		Sex:          "женщина",
+		Age:          24,
+		Name:         "Александра",
+		FamilyStatus: "свободна",
+		Children:     0,
 	}
 	elsis := family.Family{
-		Sex:          false,
-		Age:          1,
-		Name:         "ФАВЫФЫВФЫАФЫВАФЫВФЫФЫА",
-		FamilyStatus: false,
-		Children:     3,
+		Sex:          "женщина",
+		Age:          28,
+		Name:         "Ксения",
+		FamilyStatus: "свободна",
+		Children:     0,
 	}
 	doggy := pets.Pets{
 		Type:  "Собака",
@@ -113,49 +106,56 @@ func Make() House {
 		Name:  "Тася",
 	}
 
-	laptop := devices.Devices{
-		Type:         "Ноутбук",
-		Length:       35,
-		Width:        20,
-		Color:        "Черный",
-		VoiceControl: false,
+	PC := devices.Devices{
+		Type:     "PC",
+		Length:   50,
+		Width:    30,
+		Color:    "Белый",
+		Wireless: false,
 	}
 	phone := devices.Devices{
-		Type:         "Телефон",
-		Length:       15,
-		Width:        7,
-		Color:        "Черный",
-		VoiceControl: true,
+		Type:     "Телефон",
+		Length:   16,
+		Width:    8,
+		Color:    "Зеленый",
+		Wireless: true,
 	}
-	pelletMachine := devices.Devices{
-		Type:         "Машинка для катышков",
-		Length:       20,
-		Width:        4,
-		Color:        "Черный",
-		VoiceControl: false,
+	mouse := devices.Devices{
+		Type:     "Мышка",
+		Length:   15,
+		Width:    7,
+		Color:    "Бирюзовый",
+		Wireless: true,
 	}
-	watch := devices.Devices{
-		Type:         "Часы",
-		Length:       4,
-		Width:        1,
-		Color:        "Черный",
-		VoiceControl: false,
+	headphones := devices.Devices{
+		Type:     "наушники",
+		Length:   10,
+		Width:    1,
+		Color:    "Черный",
+		Wireless: false,
 	}
-	epilator := devices.Devices{
-		Type:         "Эпилятор",
-		Length:       10,
-		Width:        6,
-		Color:        "Белый",
-		VoiceControl: false,
+	keyboard := devices.Devices{
+		Type:     "Клавиатура",
+		Length:   20,
+		Width:    7,
+		Color:    "Белый",
+		Wireless: true,
+	}
+	monitor := devices.Devices{
+		Type:     "Монитор",
+		Length:   35,
+		Width:    20,
+		Color:    "Черный",
+		Wireless: false,
 	}
 	house := House{
 		Family:        []family.Family{dad, mom, bro, esis, elsis},
-		pets:          []pets.Pets{doggy},
-		Devices:       []devices.Devices{laptop, phone, pelletMachine, watch, epilator},
-		Furniture:     []furniture.Furniture{table, chair, wardrobe, bed, shelf},
-		Rooms:         1,
-		Square:        20,
-		CeilingHeight: 250,
+		Pets:          []pets.Pets{doggy},
+		Devices:       []devices.Devices{PC, phone, keyboard, monitor, mouse, headphones},
+		Furniture:     []furniture.Furniture{table, chair, wardrobe, bed},
+		Rooms:         3,
+		Square:        70,
+		CeilingHeight: 270,
 	}
 	return house
 }

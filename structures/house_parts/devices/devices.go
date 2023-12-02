@@ -6,18 +6,18 @@ import (
 )
 
 type Devices struct {
-	Type         string
-	Length       types.Centimeter
-	Width        types.Centimeter
-	Color        string
-	VoiceControl bool
+	Type     string
+	Length   types.Centimeter
+	Width    types.Centimeter
+	Color    string
+	Wireless bool
 }
 
 func (d Devices) Print() {
 	fmt.Print("Тип устройства: ", d.Type, "\nДлина устройства: ", d.Length, "\nШирина устройства: ", d.Width, "\nЦвет: ", d.Color, "\n")
-	if d.VoiceControl {
-		fmt.Print("Управление голосом: Да\n")
+	if d.Wireless {
+		fmt.Print("Поддерживает беспроводную работу\n")
 	} else {
-		fmt.Print("Управление голосом: Нет\n")
+		fmt.Print("Не поддерживает беспроводную работу\n")
 	}
 }
