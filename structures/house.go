@@ -104,6 +104,7 @@ func Make() House {
 		Breed: "Такса",
 		Age:   14,
 		Name:  "Тася",
+		Sex:   "Самка",
 	}
 
 	PC := devices.Devices{

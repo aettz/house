@@ -16,8 +16,8 @@ type Devices struct {
 func (d Devices) Print() {
 	fmt.Print("\nТип устройства: ", d.Type, "\nДлина устройства: ", d.Length, "\nШирина устройства: ", d.Width, "\nЦвет: ", d.Color, "\n")
 	if d.Wireless {
-		fmt.Print("Поддерживает беспроводную работу", "\n")
+		fmt.Print("Поддерживает беспроводную работу ", "\n")
 	} else {
-		fmt.Print("Не поддерживает беспроводную работу", "\n")
+		fmt.Print("Не поддерживает беспроводную работу ", "\n")
 	}
 }
