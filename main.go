@@ -1,7 +1,7 @@
 package main
 
 import (
-	house "house/structures"
+	house "hause/structures"
 )
 
 func main() {

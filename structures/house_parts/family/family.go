@@ -11,5 +11,5 @@ type Family struct {
 }
 
 func (f Family) Print() {
-	fmt.Print("\nИмя: ", f.Name, "\nВозраст: ", f.Age, "\nПол: ", f.Sex, "\nСемейный статус: ", f.FamilyStatus, "\nДети: ", f.Children)
+	fmt.Print("\nИмя: ", f.Name, "\nВозраст: ", f.Age, "\nПол: ", f.Sex, "\nСемейный статус: ", f.FamilyStatus, "\nДети: ", f.Children, "\n")
 }
